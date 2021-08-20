@@ -95,6 +95,7 @@ func readCustomDomain(d *schema.ResourceData, m interface{}) error {
 	d.Set("type", c.Type)
 	d.Set("primary", c.Primary)
 	d.Set("status", c.Status)
+	d.Set("verification_method", c.VerificationMethod)
 
 	if c.Verification != nil {
 		d.Set("verification", []map[string]interface{}{
